@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: onboarding
+      POSTGRES_USER: onboarding
+      POSTGRES_PASSWORD: onboarding
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
